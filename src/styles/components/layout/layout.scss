@@ -1,25 +1,28 @@
 // Horizontal scroll
 .project-container {
   overscroll-behavior: none;
-  width: 300%;
-  height: 100%;
+  width: 600%;
+  height: 100vh;
   display: flex;
   flex-wrap: nowrap;
 }
 .panel {
-  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  &.section-quotes {
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+  &.panel-quotes {
     background-color: pink;
   }
-  &.section-timeline {
+  &.panel-timeline {
     background-color: teal;
   }
-  &.section-conclusion {
+  &.panel-conclusion {
     background-color: yellow;
   }
 }

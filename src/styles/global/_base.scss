@@ -23,6 +23,8 @@ body{
   background: $bg;
   overscroll-behavior: none;
   height: 100vh;
+  // scroll-behavior: auto;
+  // overflow-y: scroll;
   @media (max-width: $sm) {
     font-size: 1.6rem;
   }
