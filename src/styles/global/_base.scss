@@ -1,0 +1,56 @@
+/**
+ * Base Styles
+ */
+
+ html {
+	font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+body{
+  margin: 0;
+  font-family: $fontPrimary;
+  font-size: $fontSize;
+  line-height: 1.4;
+  font-weight: 400;
+  color: $text;
+  fill: $text;
+  background: $bg;
+  overscroll-behavior: none;
+  height: 100vh;
+  @media (max-width: $sm) {
+    font-size: 1.6rem;
+  }
+
+  // Prevent background scrolling when mobile menu is active
+  &.freeze {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+input,
+textarea,
+select,
+button {
+	font: inherit;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+// Remove outline if user is not navigating with keyboard
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}

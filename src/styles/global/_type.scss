@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@400;700&display=swap');
+
+$fontPrimary: 'Noto Sans', sans-serif;
+$fontSecondary: 'Fjalla One', sans-serif;;
+$fontSize: 1.6rem;
+
+// Titles
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontSecondary;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h1 {
+  margin: 4rem 0 1rem;
+  font-size: 6.4rem;
+  @media (max-width: $md) {
+    font-size: 4rem;
+  }
+  @media (max-width: $sm) {
+    font-size: 3.5rem;
+  }
+}
+h2 {
+  margin: 3rem 0 1rem;
+  font-size: 4rem;
+  @media (max-width: $sm) {
+    font-size: 3rem;
+  }
+}
+h3 {
+  margin: 1rem 0;
+  font-family: $fontPrimary;
+  font-size: 2.2rem;
+  font-weight: 600;
+  @media (max-width: $sm) {
+    font-size: 2rem;
+  }
+}
+
+// Links
+a {
+  color: $text;
+  text-decoration: none;
+  transition-property: color;
+  @include easeSineIn;
+  &:hover, &:focus {
+    @include easeSineOut;
+  }
+}
+
+// Bold text
+.emphasis {
+  font-weight: 600;
+}
